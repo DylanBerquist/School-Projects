@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lan="en-US">
+
+<!--
+Purpose: project 5
+Name: Dylan Berquist
+Date: 1/22/2019
+-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Magic 8 ball</title>
+</head>
+
+<body>
+
+	<h1>Welcome to the Magic 8 Ball game</h1>
+	<p>Ask me anything!</p>
+	<div id="question">
+		<input type="input" placeholder="Your Question..."/>
+	</div>
+	<input id="button" type="button" value="Submit" onclick="response();"/>
+	<p id="response"></p>
+
+	<script>
+		function response(){
+			var responseList = [
+				"it is certain", "reply hazy, try again", 
+				"it is decidedly so", "ask again later", 
+				"without a doubt", "better not tell you now", 
+				"yes - definitely", "cannot predict now", 
+				"you may rely on it", "concentrate and ask again", 
+				"as i see, yes", "don't count on it", 
+				"most likely", "my reply is no", 
+				"outlook good", "my sources say no", 
+				"yes", "outlook not so good", 
+				"signs point to yes", "very doubtful"];
+			var number = Math.floor(Math.random()*20);
+			document.getElementById("response").innerHTML = responseList[number];
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lan="en-US">
+
+<!--
+Purpose: project 5
+Name: Dylan Berquist
+Date: 1/22/2019
+-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Guess My Number</title>
+</head>
+
+<body>
+
+	<h1>Guess my Number!</h1>
+	<p>Valid numbers are: 1 through 100</p>
+	<div id="question1">
+		<input type="number" placeholder="Your Number..."/>
+	</div>
+	<div id="question2">
+		<input type="input" placeholder="Your Name..."/>
+	</div>
+	<input id="button" type="button" value="Submit" onclick="response();"/>
+	<p id="response"></p>
+
+	<script>
+		function response(){
+
+			var name = question2;
+			var guess = question1;
+			var number = Math.floor(Math.random()*100);
+
+			if(guess > number)
+				document.getElementById("response").innerHTML = name+" That guess is too high!";
+			else if(guess < number)
+				document.getElementById("response").innerHTML = name+" That guess is too low!";
+			else
+				document.getElementById("response").innerHTML = name+" You got it!!! Enter another number to try again;";
+		}
+	</script>
+
+</body>
+</html>
